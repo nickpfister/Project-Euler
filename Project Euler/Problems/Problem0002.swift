@@ -1,3 +1,10 @@
+//
+//  Problem0002.swift
+//  Project Euler
+//
+//  Created by Nick Pfister on 1/10/21.
+//
+
 func sumOfEvenFibonacciNumbers(_ max: Int) -> Int {
     var sum = 0
     var cur = 1

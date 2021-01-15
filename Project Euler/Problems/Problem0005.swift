@@ -1,3 +1,10 @@
+//
+//  Problem0005.swift
+//  Project Euler
+//
+//  Created by Nick Pfister on 1/11/21.
+//
+
 import Foundation
 
 func smallestMultiple(_ max: Int) -> Int {

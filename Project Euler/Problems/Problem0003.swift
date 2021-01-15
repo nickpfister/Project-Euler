@@ -1,3 +1,10 @@
+//
+//  Problem0003.swift
+//  Project Euler
+//
+//  Created by Nick Pfister on 1/10/21.
+//
+
 import Foundation
 
 func isPrime(_ number: Int) -> Bool {

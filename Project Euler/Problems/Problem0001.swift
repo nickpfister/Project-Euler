@@ -1,3 +1,10 @@
+//
+//  Problem0001.swift
+//  Project Euler
+//
+//  Created by Nick Pfister on 1/8/21.
+//
+
 func sumOfMultiples(_ max: Int) -> Int {
     var sum = 0
     
