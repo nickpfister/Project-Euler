@@ -7,4 +7,4 @@
 
 import Foundation
 
-Solutions.executeSolution(8)
+Solutions.executeSolution(9)

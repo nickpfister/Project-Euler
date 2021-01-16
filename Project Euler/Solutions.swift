@@ -11,15 +11,16 @@ public class Solutions {
     
     private static let solutionList: [((Int)-> Int, Int)] =
         [
-            /* Problem 1 */ (sumOfMultiples_better, 1000),
-            /* Problem 2 */ (sumOfEvenFibonacciNumbers_better, 4_000_000),
-            /* Problem 3 */ (largestPrimeFactor, 600_851_475_143),
-            /* Problem 4 */ (largestPalindromeProduct, 3),
-            /* Problem 5 */ (smallestMultiple, 20),
-            /* Problem 6 */ (sumSquareDifference, 100),
-            /* Problem 7 */ (nthPrime, 10001),
-            /* Problem 8 */ (largestProductInSeries, 13),
-            /* Problem 9 */ (specialPythagoreanTriplet, 1000),
+            /* Problem 0001 */ (sumOfMultiples_better, 1000),
+            /* Problem 0002 */ (sumOfEvenFibonacciNumbers_better, 4_000_000),
+            /* Problem 0003 */ (largestPrimeFactor, 600_851_475_143),
+            /* Problem 0004 */ (largestPalindromeProduct, 3),
+            /* Problem 0005 */ (smallestMultiple, 20),
+            /* Problem 0006 */ (sumSquareDifference, 100),
+            /* Problem 0007 */ (nthPrime, 10001),
+            /* Problem 0008 */ (largestProductInSeries, 13),
+            /* Problem 0009 */ (specialPythagoreanTriplet, 1000),
+            /* Problem 0010 */ (summationOfPrimes, 2_000_000),
         ]
     
     public static func executeSolution(index: Int, input: Int) {
