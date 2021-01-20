@@ -19,6 +19,7 @@
 		BEC6C56A25B28F6000082DA0 /* Problem0010.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6C56925B28F6000082DA0 /* Problem0010.swift */; };
 		BECE548725B156E60046B4B6 /* Problem0008.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE548625B156E60046B4B6 /* Problem0008.swift */; };
 		BECE548A25B171020046B4B6 /* Problem0009.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE548925B171020046B4B6 /* Problem0009.swift */; };
+		BEF1D41D25B7F74C007A0765 /* Problem0011.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1D41C25B7F74C007A0765 /* Problem0011.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		BEC6C56925B28F6000082DA0 /* Problem0010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0010.swift; sourceTree = "<group>"; };
 		BECE548625B156E60046B4B6 /* Problem0008.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0008.swift; sourceTree = "<group>"; };
 		BECE548925B171020046B4B6 /* Problem0009.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0009.swift; sourceTree = "<group>"; };
+		BEF1D41C25B7F74C007A0765 /* Problem0011.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0011.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				BECE548625B156E60046B4B6 /* Problem0008.swift */,
 				BECE548925B171020046B4B6 /* Problem0009.swift */,
 				BEC6C56925B28F6000082DA0 /* Problem0010.swift */,
+				BEF1D41C25B7F74C007A0765 /* Problem0011.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				BEC6C56A25B28F6000082DA0 /* Problem0010.swift in Sources */,
 				BE76C97925AEBE020069EE43 /* Problem0001.swift in Sources */,
 				BEA1664525B013A900FAA924 /* Problem0006.swift in Sources */,
+				BEF1D41D25B7F74C007A0765 /* Problem0011.swift in Sources */,
 				BEA1664825B016AF00FAA924 /* Problem0007.swift in Sources */,
 				BE76C97C25AEBF130069EE43 /* Solutions.swift in Sources */,
 				BE76C96825AEBC9C0069EE43 /* main.swift in Sources */,

@@ -21,6 +21,7 @@ public class Solutions {
             /* Problem 0008 */ (largestProductInSeries, 13),
             /* Problem 0009 */ (specialPythagoreanTriplet, 1000),
             /* Problem 0010 */ (summationOfPrimes, 2_000_000),
+            /* Problem 0011 */ (largestProductInGrid, 4),
         ]
     
     public static func executeSolution(index: Int, input: Int) {
