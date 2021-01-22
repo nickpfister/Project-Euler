@@ -7,4 +7,15 @@
 
 import Foundation
 
-Solutions.executeSolution(10)
+Solutions.executeSolution(11)
+
+/*
+ Commonly used math that could be extracted:
+ 
+ - Integer square root
+ - IsPrime
+ - Product of series
+ - Prime Factorization
+ 
+ 
+ */

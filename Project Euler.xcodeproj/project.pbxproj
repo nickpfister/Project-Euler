@@ -14,6 +14,7 @@
 		BE76C97825AEBE020069EE43 /* Problem0002.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76C97325AEBE020069EE43 /* Problem0002.swift */; };
 		BE76C97925AEBE020069EE43 /* Problem0001.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76C97425AEBE020069EE43 /* Problem0001.swift */; };
 		BE76C97C25AEBF130069EE43 /* Solutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76C97B25AEBF130069EE43 /* Solutions.swift */; };
+		BE9DA69B25BA8194002FFEB9 /* Problem0012.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DA69A25BA8194002FFEB9 /* Problem0012.swift */; };
 		BEA1664525B013A900FAA924 /* Problem0006.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1664425B013A900FAA924 /* Problem0006.swift */; };
 		BEA1664825B016AF00FAA924 /* Problem0007.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1664725B016AF00FAA924 /* Problem0007.swift */; };
 		BEC6C56A25B28F6000082DA0 /* Problem0010.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6C56925B28F6000082DA0 /* Problem0010.swift */; };
@@ -43,6 +44,7 @@
 		BE76C97325AEBE020069EE43 /* Problem0002.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem0002.swift; sourceTree = "<group>"; };
 		BE76C97425AEBE020069EE43 /* Problem0001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem0001.swift; sourceTree = "<group>"; };
 		BE76C97B25AEBF130069EE43 /* Solutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solutions.swift; sourceTree = "<group>"; };
+		BE9DA69A25BA8194002FFEB9 /* Problem0012.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0012.swift; sourceTree = "<group>"; };
 		BEA1664425B013A900FAA924 /* Problem0006.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0006.swift; sourceTree = "<group>"; };
 		BEA1664725B016AF00FAA924 /* Problem0007.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0007.swift; sourceTree = "<group>"; };
 		BEC6C56925B28F6000082DA0 /* Problem0010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0010.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				BECE548925B171020046B4B6 /* Problem0009.swift */,
 				BEC6C56925B28F6000082DA0 /* Problem0010.swift */,
 				BEF1D41C25B7F74C007A0765 /* Problem0011.swift */,
+				BE9DA69A25BA8194002FFEB9 /* Problem0012.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9DA69B25BA8194002FFEB9 /* Problem0012.swift in Sources */,
 				BE76C97525AEBE020069EE43 /* Problem0005.swift in Sources */,
 				BE76C97725AEBE020069EE43 /* Problem0004.swift in Sources */,
 				BEC6C56A25B28F6000082DA0 /* Problem0010.swift in Sources */,
