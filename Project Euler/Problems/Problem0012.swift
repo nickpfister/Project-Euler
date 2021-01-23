@@ -8,12 +8,13 @@
 import Foundation
 
 class HighlyDivisibleTriangularNumber : ProblemProtocol {
+    
     var defaultInput: Int {
         500
     }
     
     var description: String {
-        "A Project Euler problem."
+        "What is the value of the first triangle number to have over five hundred divisors?"
     }
     
     func solution(input minDivisors: Int) -> Int {

@@ -8,12 +8,13 @@
 import Foundation
 
 class NthPrime : ProblemProtocol {
+    
     var defaultInput: Int {
         10001
     }
     
     var description: String {
-        "A Project Euler problem."
+        "What is the 10 001st prime number?"
     }
     
     func solution(input n: Int) -> Int {

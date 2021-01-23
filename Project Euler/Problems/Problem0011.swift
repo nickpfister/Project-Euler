@@ -8,12 +8,13 @@
 import Foundation
 
 class LargestProductInGrid : ProblemProtocol {
+    
     var defaultInput: Int {
         4
     }
     
     var description: String {
-        "A Project Euler problem."
+        "What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?"
     }
     
     func solution(input count: Int) -> Int {

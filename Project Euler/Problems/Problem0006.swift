@@ -8,12 +8,13 @@
 import Foundation
 
 class SumSquareDifference : ProblemProtocol {
+    
     var defaultInput: Int {
         100
     }
     
     var description: String {
-        "A Project Euler problem."
+        "Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum."
     }
     
     func solution(input max: Int) -> Int {

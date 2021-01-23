@@ -8,12 +8,13 @@
 import Foundation
 
 class LargestPalindromeProduct : ProblemProtocol {
+    
     var defaultInput: Int {
         3
     }
     
     var description: String {
-        "A Project Euler problem."
+        "Find the largest palindrome made from the product of two 3-digit numbers."
     }
     
     func solution(input digits: Int) -> Int {

@@ -8,12 +8,13 @@
 import Foundation
 
 class SmallestMultiple : ProblemProtocol {
+    
     var defaultInput: Int {
         20
     }
     
     var description: String {
-        "A Project Euler problem."
+        "What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?"
     }
     
     func solution(input max: Int) -> Int {

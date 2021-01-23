@@ -6,11 +6,13 @@
 //
 
 class SumOfMultiples : ProblemProtocol {
+    
     var defaultInput: Int {
         1000
     }
+    
     var description: String {
-        "A Project Euler problem."
+        "Find the sum of all the multiples of 3 or 5 below 1000."
     }
     
     func solution(input max: Int) -> Int {

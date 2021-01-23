@@ -7,26 +7,13 @@
 
 import Foundation
 
-class ProblemProtocolTemplate : ProblemProtocol {
-    var defaultInput: Int {
-        1000
-    }
-    
-    var description: String {
-        "A Project Euler problem."
-    }
-    
-    func solution(input: Int) -> Int {
-        return -1
-    }
-}
-
 class LargestPrimeFactor : ProblemProtocol {
     var defaultInput: Int {
         600_851_475_143
     }
+    
     var description: String {
-        "A Project Euler problem."
+        What is the largest prime factor of the number 600851475143 ?
     }
     
     func solution(input number: Int) -> Int {

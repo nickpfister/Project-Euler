@@ -18,12 +18,12 @@ class ProblemSolver {
         return ExecutionData.init(index: index, duration: duration, answer: answer)
     }
     
-    private class func wrapSolution(problem: ProblemProtocol, input inputOverride: Int?) -> () -> Int {
+    private class func wrapSolution(problem: ProblemProtocol, input inputOverride: Int? = nil) -> () -> Int {
         let input = inputOverride ?? problem.defaultInput
         return { problem.solution(input: input) }
     }
     
-    class func executeSolution(_ index: Int,_ input: Int? = nil) {
+    class func executeSolution(_ index: Int, input: Int? = nil) {
         let solutionWrapper = wrapSolution(problem: ProblemCollection[index], input: input)
         let data = getExecutionData(index: index, solutionWrapper: solutionWrapper)
         print(data.description)
@@ -31,5 +31,16 @@ class ProblemSolver {
     
     class func executeLastSolution() {
         executeSolution(ProblemCollection.count - 1)
+    }
+    
+    class func showLongestRunningSolutions() {
+        var allExecutionData = [ExecutionData]()
+        for i in 0..<ProblemCollection.count {
+            let solutionWrapper = wrapSolution(problem: ProblemCollection[i])
+            let data = getExecutionData(index: i, solutionWrapper: solutionWrapper)
+            allExecutionData.append(data)
+        }
+        allExecutionData.sort(by: {$0.duration > $1.duration})
+        for i in 0...2 { print(allExecutionData[i].description) }
     }
 }

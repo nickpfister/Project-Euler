@@ -8,12 +8,13 @@
 import Foundation
 
 class SummationOfPrimes : ProblemProtocol {
+    
     var defaultInput: Int {
         2_000_000
     }
     
     var description: String {
-        "A Project Euler problem."
+        "Find the sum of all the primes below two million."
     }
     
     func solution(input max: Int) -> Int {

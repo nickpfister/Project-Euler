@@ -6,12 +6,13 @@
 //
 
 class SumOfEvenFibonacciNumbers: ProblemProtocol {
+    
     var defaultInput: Int {
         4_000_000
     }
     
     var description: String {
-        ""
+        "By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms."
     }
     
     func solution(input max: Int) -> Int {
