@@ -13,7 +13,7 @@ class LargestPrimeFactor : ProblemProtocol {
     }
     
     var description: String {
-        What is the largest prime factor of the number 600851475143 ?
+        "What is the largest prime factor of the number 600851475143 ?"
     }
     
     func solution(input number: Int) -> Int {

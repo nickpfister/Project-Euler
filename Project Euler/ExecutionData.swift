@@ -11,7 +11,13 @@ struct ExecutionData {
     let index: Int
     let duration: TimeInterval
     let answer: Int
-    var description: String {
-        "Problem \(index + 1):\n\tAnswer: \(answer)\n\tTime Elapsed: \(duration)"
+    let description: String
+    var humanReadable: String {
+        """
+        Problem \(index + 1):
+            Description: \(description)
+            Answer: \(answer)
+            Time Elapsed: \(duration)s
+        """
     }
 }
