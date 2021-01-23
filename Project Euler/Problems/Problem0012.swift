@@ -8,16 +8,18 @@
 import Foundation
 
 func highlyDivisibleTriangularNumber(_ minDivisors: Int) -> Int {
-    var triangularNumber = 0
-    var increment = 1
-    var divisors = 1
+    var n = 0
+    var divisors = 0
     repeat {
-        triangularNumber += increment
-        increment += 1
-        divisors = divisorCount(triangularNumber)
+        n += 1
+        if n % 2 == 0 {
+            divisors = divisorCount(n + 1) * divisorCount(n / 2)
+        } else {
+            divisors = divisorCount((n + 1) / 2) * divisorCount(n)
+        }
     } while divisors <= minDivisors
     
-    return triangularNumber
+    return n * (n + 1) / 2
 }
 
 func divisorCount(_ number: Int) -> Int {

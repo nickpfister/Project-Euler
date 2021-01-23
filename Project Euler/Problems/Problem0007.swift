@@ -8,6 +8,11 @@
 import Foundation
 
 func nthPrime(_ n : Int) -> Int {
+    let primes = nPrimes(n)
+    return primes[primes.count - 1]
+}
+
+func nPrimes(_ n : Int) -> [Int] {
     var primes = [2, 3]
     
     var iteration = 1
@@ -27,5 +32,5 @@ func nthPrime(_ n : Int) -> Int {
         iteration += 1
     }
     
-    return primes[primes.count - 1]
+    return primes
 }

@@ -16,6 +16,5 @@ Solutions.executeSolution(11)
  - IsPrime
  - Product of series
  - Prime Factorization
- 
- 
+ - Matrixes
  */
