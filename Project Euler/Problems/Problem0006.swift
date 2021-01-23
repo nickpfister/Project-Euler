@@ -7,9 +7,19 @@
 
 import Foundation
 
-func sumSquareDifference(_ max: Int) -> Int {
-    let sums = (1...max).reduce(0, +)
-    let squareOfSums = sums * sums
-    let sumOfSquares = (1...max).reduce(0, { $0 + $1 * $1} )
-    return squareOfSums - sumOfSquares
+class SumSquareDifference : ProblemProtocol {
+    var defaultInput: Int {
+        100
+    }
+    
+    var description: String {
+        "A Project Euler problem."
+    }
+    
+    func solution(input max: Int) -> Int {
+        let sums = (1...max).reduce(0, +)
+        let squareOfSums = sums * sums
+        let sumOfSquares = (1...max).reduce(0, { $0 + $1 * $1} )
+        return squareOfSums - sumOfSquares
+    }
 }

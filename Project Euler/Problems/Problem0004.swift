@@ -7,19 +7,29 @@
 
 import Foundation
 
-func largestPalindromeProduct(_ digits: Int) -> Int {
-    let max = Int(pow(10, Double(digits))) - 3
-    let min = Int(pow(10, Double(digits - 1)))
-    for i in (min...max).reversed() {
-        let palindrome = Int(String(i) + String(i).reversed())!
+class LargestPalindromeProduct : ProblemProtocol {
+    var defaultInput: Int {
+        3
+    }
+    
+    var description: String {
+        "A Project Euler problem."
+    }
+    
+    func solution(input digits: Int) -> Int {
+        let max = Int(pow(10, Double(digits))) - 3
+        let min = Int(pow(10, Double(digits - 1)))
         for i in (min...max).reversed() {
-            if (palindrome % i == 0) {
-                let factor = palindrome / i
-                if(String(factor).count == digits){
-                    return palindrome
+            let palindrome = Int(String(i) + String(i).reversed())!
+            for i in (min...max).reversed() {
+                if (palindrome % i == 0) {
+                    let factor = palindrome / i
+                    if(String(factor).count == digits){
+                        return palindrome
+                    }
                 }
             }
         }
+        return -1
     }
-    return -1
 }

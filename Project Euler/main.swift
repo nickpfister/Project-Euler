@@ -7,7 +7,10 @@
 
 import Foundation
 
-Solutions.executeSolution(11)
+for i in 0..<ProblemCollection.count{
+    ProblemSolver.executeSolution(i)
+}
+
 
 /*
  Commonly used math that could be extracted:

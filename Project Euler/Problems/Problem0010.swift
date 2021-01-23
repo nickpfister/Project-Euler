@@ -7,38 +7,48 @@
 
 import Foundation
 
-func summationOfPrimes(max: Int) -> Int {
-    let largestNumberToSave = Int(sqrt(Double(max)))
-    var primes = [2, 3]
-    var sum = 5
-    var k = 6
-    
-    func addPrime(_ number: Int) {
-        sum += number
-        if number <= largestNumberToSave { primes.append(number) }
+class SummationOfPrimes : ProblemProtocol {
+    var defaultInput: Int {
+        2_000_000
     }
     
-    primeLoop: while k < max - 1 {
-        let kPlus = k + 1
-        let kMinus = k - 1
-        k += 6
-        var kPlusIsPrime = true
-        var kMinusIsPrime = true
-        let max = Int(sqrt(Double(kPlus)))
-        for prime in primes {
-            guard prime <= max else {
-                break
-            }
-            
-            if kPlusIsPrime && kPlus % prime == 0 { kPlusIsPrime = false }
-            if kMinusIsPrime && kMinus % prime == 0 { kMinusIsPrime = false }
-            if !kPlusIsPrime && !kMinusIsPrime {
-                continue primeLoop
-            }
+    var description: String {
+        "A Project Euler problem."
+    }
+    
+    func solution(input max: Int) -> Int {
+        let largestNumberToSave = Int(sqrt(Double(max)))
+        var primes = [2, 3]
+        var sum = 5
+        var k = 6
+        
+        func addPrime(_ number: Int) {
+            sum += number
+            if number <= largestNumberToSave { primes.append(number) }
         }
-        if kMinusIsPrime { addPrime(kMinus) }
-        if kPlusIsPrime { addPrime(kPlus) }
+        
+        primeLoop: while k < max - 1 {
+            let kPlus = k + 1
+            let kMinus = k - 1
+            k += 6
+            var kPlusIsPrime = true
+            var kMinusIsPrime = true
+            let max = Int(sqrt(Double(kPlus)))
+            for prime in primes {
+                guard prime <= max else {
+                    break
+                }
+                
+                if kPlusIsPrime && kPlus % prime == 0 { kPlusIsPrime = false }
+                if kMinusIsPrime && kMinus % prime == 0 { kMinusIsPrime = false }
+                if !kPlusIsPrime && !kMinusIsPrime {
+                    continue primeLoop
+                }
+            }
+            if kMinusIsPrime { addPrime(kMinus) }
+            if kPlusIsPrime { addPrime(kPlus) }
+        }
+        
+        return sum
     }
-    
-    return sum
 }

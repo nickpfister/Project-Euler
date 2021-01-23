@@ -7,30 +7,18 @@
 
 import Foundation
 
-func nthPrime(_ n : Int) -> Int {
-    let primes = nPrimes(n)
-    return primes[primes.count - 1]
-}
-
-func nPrimes(_ n : Int) -> [Int] {
-    var primes = [2, 3]
-    
-    var iteration = 1
-    while(primes.count < n) {
-        let kPlus = iteration * 6 + 1
-        let kMinus = kPlus - 2
-        let max = Int(sqrt(Double(kPlus)))
-        var kPlusIsPrime = true, kMinusIsPrime = true
-        for prime in primes {
-            if prime > max { break }
-            kPlusIsPrime = kPlusIsPrime ? kPlus % prime != 0 : false
-            kMinusIsPrime = kMinusIsPrime ? kMinus % prime != 0 : false
-            if !kPlusIsPrime && !kMinusIsPrime { break }
-        }
-        if kMinusIsPrime { primes.append(kMinus) }
-        if kPlusIsPrime && primes.count < n { primes.append(kPlus) }
-        iteration += 1
+class NthPrime : ProblemProtocol {
+    var defaultInput: Int {
+        10001
     }
     
-    return primes
+    var description: String {
+        "A Project Euler problem."
+    }
+    
+    func solution(input n: Int) -> Int {
+        let primes = nPrimes(n)
+        return primes[primes.count - 1]
+    }
 }
+
