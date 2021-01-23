@@ -18,23 +18,7 @@ class LargestProductInGrid : ProblemProtocol {
     }
     
     func solution(input count: Int) -> Int {
-        // This is a simplification of problem 8 for the scope
-        // of this problem. Perhaps later these can be unified.
-        func largestProductInSeries(series: [Int]) -> Int {
-            guard count < series.count else {
-                return 0
-            }
-            var largest = 0
-            for i in 0...(series.count - count) {
-                let subSeries = series[i..<(i+count)]
-                if subSeries.contains(0) { continue }
-                let product = subSeries.reduce(1, *)
-                largest = max(product, largest)
-            }
-            
-            return largest
-        }
-        
+
         let rawGrid = """
         08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
         49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -70,12 +54,12 @@ class LargestProductInGrid : ProblemProtocol {
         
         // Check rows
         for row in grid {
-            largest = max(largest, largestProductInSeries(series: row))
+            largest = max(largest, largestProductInSeries(series: row, count: count))
         }
         
         // Check Columns
         for i in 0..<dim {
-            largest = max(largest, largestProductInSeries(series: grid.map({$0[i]})))
+            largest = max(largest, largestProductInSeries(series: grid.map({$0[i]}), count: count))
         }
         
         // Check diagonals
@@ -92,10 +76,10 @@ class LargestProductInGrid : ProblemProtocol {
             }
             largest = max(
                 largest,
-                largestProductInSeries(series: topPositiveDiagonal),
-                largestProductInSeries(series: topNegativeDiagonal),
-                largestProductInSeries(series: bottomPositiveDiagonal),
-                largestProductInSeries(series: bottomNegativeDiagonal)
+                largestProductInSeries(series: topPositiveDiagonal, count: count),
+                largestProductInSeries(series: topNegativeDiagonal, count: count),
+                largestProductInSeries(series: bottomPositiveDiagonal, count: count),
+                largestProductInSeries(series: bottomNegativeDiagonal, count: count)
             )
         }
         

@@ -88,3 +88,18 @@ func divisors(_ number: Int) -> Int {
     
     return divisors.count
 }
+
+func largestProductInSeries(series: [Int], count: Int) -> Int {
+    guard count < series.count else {
+        return 0
+    }
+    var largest = 0
+    for i in 0...(series.count - count) {
+        let subSeries = series[i..<(i+count)]
+        if subSeries.contains(0) { continue }
+        let product = subSeries.reduce(1, *)
+        largest = max(product, largest)
+    }
+    
+    return largest
+}
