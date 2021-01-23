@@ -30,7 +30,7 @@ func isPrime(_ number: Int) -> Bool {
     return true
 }
 
-func getPrimeFactorization(_ number: Int) -> [Int] {
+func primeFactorization(_ number: Int) -> [Int] {
     guard !isPrime(number) else {
         return [number]
     }
@@ -44,7 +44,7 @@ func getPrimeFactorization(_ number: Int) -> [Int] {
         }
     }
     factors.append(smallestFactor)
-    factors += getPrimeFactorization(number/smallestFactor)
+    factors += primeFactorization(number/smallestFactor)
     return factors
 }
 
@@ -71,7 +71,7 @@ func nPrimes(_ n : Int) -> [Int] {
     return primes
 }
 
-func divisorCount(_ number: Int) -> Int {
+func divisors(_ number: Int) -> Int {
     guard number > 0 else {
         return 0
     }

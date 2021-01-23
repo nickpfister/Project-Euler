@@ -18,15 +18,15 @@ class HighlyDivisibleTriangularNumber : ProblemProtocol {
     
     func solution(input minDivisors: Int) -> Int {
         var n = 0
-        var divisors = 0
+        var divisorCount = 0
         repeat {
             n += 1
             if n % 2 == 0 {
-                divisors = divisorCount(n + 1) * divisorCount(n / 2)
+                divisorCount = divisors(n + 1) * divisors(n / 2)
             } else {
-                divisors = divisorCount((n + 1) / 2) * divisorCount(n)
+                divisorCount = divisors((n + 1) / 2) * divisors(n)
             }
-        } while divisors <= minDivisors
+        } while divisorCount <= minDivisors
         
         return n * (n + 1) / 2
     }

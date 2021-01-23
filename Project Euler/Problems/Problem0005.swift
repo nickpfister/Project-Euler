@@ -24,9 +24,9 @@ class SmallestMultiple : ProblemProtocol {
         var factors = [Int: Int]()
         
         for i in 2...max {
-            let primeFactorization = getPrimeFactorization(i)
+            let primeFactors = primeFactorization(i)
             var counts = [Int: Int]()
-            primeFactorization.forEach { counts[$0, default: 0] += 1 }
+            primeFactors.forEach { counts[$0, default: 0] += 1 }
             for (number, count) in counts {
                 if factors[number] == nil || factors[number]! < count {
                     factors[number] = count
