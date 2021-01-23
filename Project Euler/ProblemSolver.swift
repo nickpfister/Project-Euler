@@ -18,20 +18,13 @@ class ProblemSolver {
         return ExecutionData.init(index: index, duration: duration, answer: answer)
     }
     
-    private class func wrapSolution(problem: ProblemProtocol, input inputOverride: Int? = nil) -> () -> Int {
+    private class func wrapSolution(problem: ProblemProtocol, input inputOverride: Int?) -> () -> Int {
         let input = inputOverride ?? problem.defaultInput
         return { problem.solution(input: input) }
     }
     
-    class func executeSolution(_ index: Int, input: Int) {
-        let solutionWrapper = wrapSolution(problem: ProblemCollection[index])
-        let data = getExecutionData(index: index, solutionWrapper: solutionWrapper)
-        print(data.description)
-    }
-    
-    class func executeSolution(_ index: Int) {
-        let problem = ProblemCollection[index]
-        let solutionWrapper = wrapSolution(problem: problem, input: problem.defaultInput)
+    class func executeSolution(_ index: Int,_ input: Int? = nil) {
+        let solutionWrapper = wrapSolution(problem: ProblemCollection[index], input: input)
         let data = getExecutionData(index: index, solutionWrapper: solutionWrapper)
         print(data.description)
     }

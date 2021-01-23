@@ -7,10 +7,7 @@
 
 import Foundation
 
-for i in 0..<ProblemCollection.count{
-    ProblemSolver.executeSolution(i)
-}
-
+ProblemSolver.executeLastSolution()
 
 /*
  Commonly used math that could be extracted:

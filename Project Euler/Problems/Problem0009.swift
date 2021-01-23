@@ -27,7 +27,6 @@ class SpecialPythagoreanTriplet : ProblemProtocol {
             let c = sum - a - b
             if a < sum && c < sum {
                 if a * a + b * b == c * c {
-                    print("\(a) \(b) \(c)")
                     return a * b * c
                 }
             }
