@@ -29,8 +29,8 @@ class ProblemSolver {
         print(getExecutionData(index: index, input: input).humanReadable)
     }
     
-    class func executeLastSolution() {
-        executeSolution(ProblemCollection.count - 1)
+    class func executeLastSolution(input: Int? = nil) {
+        executeSolution(ProblemCollection.count - 1, input: input)
     }
     
     class func showLongestRunningSolutions() {

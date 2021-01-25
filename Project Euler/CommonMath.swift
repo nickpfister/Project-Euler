@@ -107,3 +107,14 @@ func largestProductInSeries(series: [Int], count: Int) -> Int {
 func sqrtToInt(_ number: Int) -> Int {
     Int(sqrt(Double(number)))
 }
+
+func collatzLength(_ number: Int) -> Int {
+    var length = 1
+    var currentTerm = number
+    while currentTerm != 1 {
+        if currentTerm % 2 == 0 { currentTerm /= 2 }
+        else { currentTerm *= 3; currentTerm += 1 }
+        length += 1
+    }
+    return length
+}
