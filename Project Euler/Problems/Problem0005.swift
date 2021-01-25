@@ -8,7 +8,6 @@
 import Foundation
 
 class SmallestMultiple : ProblemProtocol {
-    
     var defaultInput: Int {
         20
     }

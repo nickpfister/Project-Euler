@@ -55,7 +55,7 @@ func nPrimes(_ n : Int) -> [Int] {
     while(primes.count < n) {
         let kPlus = iteration * 6 + 1
         let kMinus = kPlus - 2
-        let max = Int(sqrt(Double(kPlus)))
+        let max = sqrtToInt(kPlus)
         var kPlusIsPrime = true, kMinusIsPrime = true
         for prime in primes {
             if prime > max { break }
@@ -77,7 +77,7 @@ func divisors(_ number: Int) -> Int {
     }
     
     var divisors: Set<Int> = []
-    let max = Int(sqrt(Double(number)))
+    let max = sqrtToInt(number)
     
     for i in 1...max {
         if number % i == 0 {
@@ -102,4 +102,8 @@ func largestProductInSeries(series: [Int], count: Int) -> Int {
     }
     
     return largest
+}
+
+func sqrtToInt(_ number: Int) -> Int {
+    Int(sqrt(Double(number)))
 }

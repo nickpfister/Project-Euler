@@ -8,7 +8,6 @@
 import Foundation
 
 class SumSquareDifference : ProblemProtocol {
-    
     var defaultInput: Int {
         100
     }

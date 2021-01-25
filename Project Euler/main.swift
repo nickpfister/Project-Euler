@@ -7,7 +7,7 @@
 
 import Foundation
 
-ProblemSolver.showLongestRunningSolutions()
+ProblemSolver.executeLastSolution()
 
 /*
  Commonly used math that could be extracted:

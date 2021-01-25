@@ -8,7 +8,6 @@
 import Foundation
 
 class NthPrime : ProblemProtocol {
-    
     var defaultInput: Int {
         10001
     }

@@ -8,7 +8,6 @@
 import Foundation
 
 class HighlyDivisibleTriangularNumber : ProblemProtocol {
-    
     var defaultInput: Int {
         500
     }

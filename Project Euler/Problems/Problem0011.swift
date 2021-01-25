@@ -8,7 +8,6 @@
 import Foundation
 
 class LargestProductInGrid : ProblemProtocol {
-    
     var defaultInput: Int {
         4
     }

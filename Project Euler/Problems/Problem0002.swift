@@ -6,7 +6,6 @@
 //
 
 class SumOfEvenFibonacciNumbers: ProblemProtocol {
-    
     var defaultInput: Int {
         4_000_000
     }

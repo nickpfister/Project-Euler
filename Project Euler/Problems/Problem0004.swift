@@ -8,7 +8,6 @@
 import Foundation
 
 class LargestPalindromeProduct : ProblemProtocol {
-    
     var defaultInput: Int {
         3
     }

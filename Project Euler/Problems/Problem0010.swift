@@ -8,7 +8,6 @@
 import Foundation
 
 class SummationOfPrimes : ProblemProtocol {
-    
     var defaultInput: Int {
         2_000_000
     }
@@ -18,7 +17,7 @@ class SummationOfPrimes : ProblemProtocol {
     }
     
     func solution(input max: Int) -> Int {
-        let largestNumberToSave = Int(sqrt(Double(max)))
+        let largestNumberToSave = sqrtToInt(max)
         var primes = [2, 3]
         var sum = 5
         var k = 6
@@ -34,7 +33,7 @@ class SummationOfPrimes : ProblemProtocol {
             k += 6
             var kPlusIsPrime = true
             var kMinusIsPrime = true
-            let max = Int(sqrt(Double(kPlus)))
+            let max = sqrtToInt(kPlus)
             for prime in primes {
                 guard prime <= max else {
                     break

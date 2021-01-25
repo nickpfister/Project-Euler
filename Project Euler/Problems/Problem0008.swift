@@ -8,7 +8,6 @@
 import Foundation
 
 class LargestProductInSeries : ProblemProtocol {
-    
     var defaultInput: Int {
         13
     }

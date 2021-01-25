@@ -23,6 +23,7 @@ struct ProblemCollection {
             /* Problem 0010 */ SummationOfPrimes(),
             /* Problem 0011 */ LargestProductInGrid(),
             /* Problem 0012 */ HighlyDivisibleTriangularNumber(),
+            /* Problem 0013 */ LargeSum()
         ]
     
     static subscript(index: Int) -> ProblemProtocol {

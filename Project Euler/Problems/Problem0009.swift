@@ -8,7 +8,6 @@
 import Foundation
 
 class SpecialPythagoreanTriplet : ProblemProtocol {
-    
     var defaultInput: Int {
         1000
     }

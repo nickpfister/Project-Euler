@@ -6,7 +6,6 @@
 //
 
 class SumOfMultiples : ProblemProtocol {
-    
     var defaultInput: Int {
         1000
     }

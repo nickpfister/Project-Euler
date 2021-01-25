@@ -26,7 +26,7 @@ class ProblemSolver {
     }
     
     class func executeSolution(_ index: Int, input: Int? = nil) {
-        print(getExecutionData(index: index, input: input))
+        print(getExecutionData(index: index, input: input).humanReadable)
     }
     
     class func executeLastSolution() {
