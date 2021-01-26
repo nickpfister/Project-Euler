@@ -8,7 +8,6 @@
 import Foundation
 
 class ProblemSolver {
-    
     private class func getExecutionData(index: Int, input inputOverride: Int? = nil) -> ExecutionData {
         let problem = ProblemCollection[index]
         let solutionWrapper = wrapSolution(problem: problem, input: inputOverride)
