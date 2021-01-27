@@ -18,19 +18,42 @@ class LatticePaths : ProblemProtocol {
     
     func solution(input: Int) -> Int {
         let graph = generateGraph(size: input)
-        return -1
+        
+        return getPathCount(graph: graph, start: 0)
     }
     
     func generateGraph(size: Int) -> [Int:[Int]] {
         var graph = [Int:[Int]]()
         let dim = size + 1
-        for i in 0..<dim*dim {
-            if i % size == 0 {
+        let nodeCount = dim*dim
+        for i in 0..<nodeCount {
+            
+            if i == nodeCount - 1 {
+                graph[i] = []
+            }
+            else if (i+1) % dim == 0 {
                 graph[i] = [i + dim]
-            } else {
+            }
+            else if i >= nodeCount - dim {
+                graph[i] = [i + 1]
+            }
+            else
+            {
                 graph[i] = [i + dim, i + 1]
             }
         }
         return graph
+    }
+    
+    func getPathCount(graph: [Int:[Int]], start: Int) -> Int {
+        var count = 0
+        if graph[start]?.count == 0 {
+            return 1
+        }
+        
+        for i in graph[start]! {
+            count += getPathCount(graph: graph, start: i)
+        }
+        return count
     }
 }
