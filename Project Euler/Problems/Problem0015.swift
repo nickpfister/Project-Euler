@@ -20,8 +20,8 @@ class LatticePaths : ProblemProtocol {
     var nodePathCountLookup = [Int:Int]()
     
     func solution(input: Int) -> Int {
+        nodePathCountLookup = [Int:Int]()
         let graph = generateGraph(size: input)
-        
         return getPathCount(graph: graph, start: 0)
     }
     

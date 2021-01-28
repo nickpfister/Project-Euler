@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE55FA5A25C2929500B3C86B /* Problem0016.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE55FA5925C2929500B3C86B /* Problem0016.swift */; };
 		BE5CADE825BBB15E000BD935 /* ProblemSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CADE725BBB15E000BD935 /* ProblemSolver.swift */; };
 		BE5CADEB25BBB713000BD935 /* ExecutionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CADEA25BBB713000BD935 /* ExecutionData.swift */; };
 		BE5CADEF25BBBAB8000BD935 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CADEE25BBBAB8000BD935 /* Problem.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE55FA5925C2929500B3C86B /* Problem0016.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0016.swift; sourceTree = "<group>"; };
 		BE5CADE725BBB15E000BD935 /* ProblemSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolver.swift; sourceTree = "<group>"; };
 		BE5CADEA25BBB713000BD935 /* ExecutionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionData.swift; sourceTree = "<group>"; };
 		BE5CADEE25BBBAB8000BD935 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				BEB268A725BE481D00CC80CC /* Problem0013.swift */,
 				BEB268AB25BE5A6500CC80CC /* Problem0014.swift */,
 				BE94A30525BFD74300862977 /* Problem0015.swift */,
+				BE55FA5925C2929500B3C86B /* Problem0016.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -157,7 +160,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					BE76C96325AEBC9C0069EE43 = {
 						CreatedOnToolsVersion = 12.3;
@@ -193,6 +196,7 @@
 				BE76C97725AEBE020069EE43 /* Problem0004.swift in Sources */,
 				BE5CADEF25BBBAB8000BD935 /* Problem.swift in Sources */,
 				BEC6C56A25B28F6000082DA0 /* Problem0010.swift in Sources */,
+				BE55FA5A25C2929500B3C86B /* Problem0016.swift in Sources */,
 				BE5CADF425BBC60C000BD935 /* CommonMath.swift in Sources */,
 				BE76C97925AEBE020069EE43 /* Problem0001.swift in Sources */,
 				BEA1664525B013A900FAA924 /* Problem0006.swift in Sources */,
@@ -332,6 +336,7 @@
 		BE76C96C25AEBC9C0069EE43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62VPKU8FKF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -343,6 +348,7 @@
 		BE76C96D25AEBC9C0069EE43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62VPKU8FKF;
 				ENABLE_HARDENED_RUNTIME = YES;
