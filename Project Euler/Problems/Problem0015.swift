@@ -16,6 +16,9 @@ class LatticePaths : ProblemProtocol {
         "How many lattice paths are there through a 20×20 grid?"
     }
     
+    // Store the path counts for each node in this. Instead of counting them for every iteration, we can refer to this
+    var nodePathCountLookup = [Int:Int]()
+    
     func solution(input: Int) -> Int {
         let graph = generateGraph(size: input)
         
@@ -30,14 +33,11 @@ class LatticePaths : ProblemProtocol {
             
             if i == nodeCount - 1 {
                 graph[i] = []
-            }
-            else if (i+1) % dim == 0 {
+            } else if (i+1) % dim == 0 {
                 graph[i] = [i + dim]
-            }
-            else if i >= nodeCount - dim {
+            } else if i >= nodeCount - dim {
                 graph[i] = [i + 1]
-            }
-            else
+            } else
             {
                 graph[i] = [i + dim, i + 1]
             }
@@ -49,11 +49,14 @@ class LatticePaths : ProblemProtocol {
         var count = 0
         if graph[start]?.count == 0 {
             return 1
+        } else if nodePathCountLookup[start] != nil {
+            return nodePathCountLookup[start]!
         }
         
         for i in graph[start]! {
             count += getPathCount(graph: graph, start: i)
         }
+        nodePathCountLookup[start] = count
         return count
     }
 }
