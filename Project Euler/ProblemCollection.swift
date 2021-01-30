@@ -27,6 +27,7 @@ struct ProblemCollection {
             /* Problem 0014 */ LongestCollatzSequence(),
             /* Problem 0015 */ LatticePaths(),
             /* Problem 0016 */ PowerDigitSum(),
+            /* Problem 0017 */ NumberLetterCounts(),
         ]
     
     static subscript(index: Int) -> ProblemProtocol {
