@@ -48,7 +48,7 @@ func primeFactorization(_ number: Int) -> [Int] {
     return factors
 }
 
-func nPrimes(_ n : Int) -> [Int] {
+func nPrimes(_ n: Int) -> [Int] {
     var primes = [2, 3]
     
     var iteration = 1
@@ -59,8 +59,8 @@ func nPrimes(_ n : Int) -> [Int] {
         var kPlusIsPrime = true, kMinusIsPrime = true
         for prime in primes {
             if prime > max { break }
-            kPlusIsPrime = kPlusIsPrime ? kPlus % prime != 0 : false
-            kMinusIsPrime = kMinusIsPrime ? kMinus % prime != 0 : false
+            kPlusIsPrime = kPlusIsPrime ? kPlus % prime != 0: false
+            kMinusIsPrime = kMinusIsPrime ? kMinus % prime != 0: false
             if !kPlusIsPrime && !kMinusIsPrime { break }
         }
         if kMinusIsPrime { primes.append(kMinus) }

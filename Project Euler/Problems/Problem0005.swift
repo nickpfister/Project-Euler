@@ -7,16 +7,15 @@
 
 import Foundation
 
-class SmallestMultiple : ProblemProtocol {
-    var defaultInput: Int {
-        20
-    }
+class SmallestMultiple: Problem, InputReceiver {
+    var input = 20
     
     var description: String {
         "What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?"
     }
     
-    func solution(input max: Int) -> Int {
+    func solution() -> Int {
+        let max = input
         guard max > 3 else {
             return max
         }

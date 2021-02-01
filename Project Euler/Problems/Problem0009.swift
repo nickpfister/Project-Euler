@@ -7,17 +7,15 @@
 
 import Foundation
 
-class SpecialPythagoreanTriplet : ProblemProtocol {
-    var defaultInput: Int {
-        1000
-    }
+class SpecialPythagoreanTriplet: Problem, InputReceiver {
+    var input = 1000
     
     var description: String {
         "There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc."
     }
     
-    func solution(input sum: Int) -> Int {
-        
+    func solution() -> Int {
+        let sum = input
         func calculateA(b: Int) -> Int {
             return (sum * b - (sum * sum / 2)) / (b - sum)
         }

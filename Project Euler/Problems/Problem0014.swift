@@ -7,16 +7,14 @@
 
 import Foundation
 
-class LongestCollatzSequence : ProblemProtocol {
-    var defaultInput: Int {
-        1_000_000
-    }
+class LongestCollatzSequence: Problem, InputReceiver {
+    var input = 1_000_000
     
     var description: String {
         "Which starting number, under one million, produces the longest chain?"
     }
     
-    func solution(input: Int) -> Int {
+    func solution() -> Int {
         var longestChain = 0
         var longestChainSeed = 0
         for i in 1..<input {

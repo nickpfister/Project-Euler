@@ -7,16 +7,15 @@
 
 import Foundation
 
-class HighlyDivisibleTriangularNumber : ProblemProtocol {
-    var defaultInput: Int {
-        500
-    }
+class HighlyDivisibleTriangularNumber: Problem, InputReceiver {
+    var input = 500
     
     var description: String {
         "What is the value of the first triangle number to have over five hundred divisors?"
     }
     
-    func solution(input minDivisors: Int) -> Int {
+    func solution() -> Int {
+        let minDivisors = input
         var n = 0
         var divisorCount = 0
         repeat {

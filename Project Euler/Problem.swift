@@ -7,10 +7,7 @@
 
 import Foundation
 
-protocol ProblemProtocol
-{
-    var defaultInput: Int { get }
+protocol Problem: AnyObject {
     var description: String { get }
-    
-    func solution(input: Int) -> Int
+    func solution() -> Int
 }

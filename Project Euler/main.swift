@@ -7,7 +7,7 @@
 
 import Foundation
 
-ProblemSolver.executeLastSolution()
+ProblemSolver.executeWithCustomInput(input: 20, problem: SmallestMultiple())
 
 /*
  Commonly used math that could be extracted:

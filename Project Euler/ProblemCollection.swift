@@ -9,7 +9,7 @@ import Foundation
 
 struct ProblemCollection {
     
-    private static let problems: [ProblemProtocol] =
+    private static let problems: [Problem] =
         [
             /* Problem 0001 */ SumOfMultiples(),
             /* Problem 0002 */ SumOfEvenFibonacciNumbers(),
@@ -30,14 +30,14 @@ struct ProblemCollection {
             /* Problem 0017 */ NumberLetterCounts(),
         ]
     
-    static subscript(index: Int) -> ProblemProtocol {
+    static subscript(index: Int) -> Problem {
         get {
             assert(index < problems.count, "Solution index out of range")
             return problems[index]
         }
     }
     
-    static var count : Int {
+    static var count: Int {
         problems.count
     }
 }

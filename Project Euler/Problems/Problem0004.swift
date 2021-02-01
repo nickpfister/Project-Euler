@@ -7,16 +7,15 @@
 
 import Foundation
 
-class LargestPalindromeProduct : ProblemProtocol {
-    var defaultInput: Int {
-        3
-    }
+class LargestPalindromeProduct: Problem, InputReceiver {
+    var input = 3
     
     var description: String {
         "Find the largest palindrome made from the product of two 3-digit numbers."
     }
     
-    func solution(input digits: Int) -> Int {
+    func solution() -> Int {
+        let digits = input
         let max = Int(pow(10, Double(digits))) - 3
         let min = Int(pow(10, Double(digits - 1)))
         for i in (min...max).reversed() {

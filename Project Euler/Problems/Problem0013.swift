@@ -7,16 +7,14 @@
 
 import Foundation
 
-class LargeSum: ProblemProtocol {
-    var defaultInput: Int {
-        10
-    }
+class LargeSum: Problem, InputReceiver {
+    var input = 10
     
     var description: String {
         "Work out the first ten digits of the sum of the following one-hundred 50-digit numbers."
     }
     
-    func solution(input: Int) -> Int {
+    func solution() -> Int {
         var remainder: Int = 0
         var lastTenDigits: String = ""
         for i in (0..<rawNumbers[0].count).reversed() {

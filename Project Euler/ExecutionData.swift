@@ -8,13 +8,13 @@
 import Foundation
 
 struct ExecutionData {
-    let index: Int
+    let index: Int?
     let duration: TimeInterval
     let answer: Int
     let description: String
     var humanReadable: String {
         """
-        Problem \(index + 1):
+        Problem\(index != nil ? " \(index!)": ""):
             Description: \(description)
             Answer: \(answer)
             Time Elapsed: \(duration)s

@@ -8,28 +8,34 @@
 import Foundation
 
 class ProblemSolver {
-    private class func getExecutionData(index: Int, input inputOverride: Int? = nil) -> ExecutionData {
-        let problem = ProblemCollection[index]
-        let solutionWrapper = wrapSolution(problem: problem, input: inputOverride)
+    private class func getExecutionData(problem: Problem, index: Int? = nil) -> ExecutionData {
         let start = Date()
-        let answer = solutionWrapper()
+        let answer = problem.solution()
         let end = Date()
         let duration = end.timeIntervalSince(start)
         
         return ExecutionData.init(index: index, duration: duration, answer: answer, description: problem.description)
     }
-    
-    private class func wrapSolution(problem: ProblemProtocol, input inputOverride: Int?) -> () -> Int {
-        let input = inputOverride ?? problem.defaultInput
-        return { problem.solution(input: input) }
+    private class func getExecutionData(index: Int) -> ExecutionData {
+        let problem = ProblemCollection[index]
+        return getExecutionData(problem: problem, index: index)
     }
     
-    class func executeSolution(_ index: Int, input: Int? = nil) {
-        print(getExecutionData(index: index, input: input).humanReadable)
+    class func executeWithCustomInput<T, U: InputReceiver>(input: T, problem: U) where U.Input == T {
+        problem.input = input
+        print(getExecutionData(problem: problem).humanReadable)
     }
     
-    class func executeLastSolution(input: Int? = nil) {
-        executeSolution(ProblemCollection.count - 1, input: input)
+    class func executeSolution(problem: Problem) {
+        print(getExecutionData(problem: problem).humanReadable)
+    }
+    
+    class func executeSolution(_ index: Int) {
+        print(getExecutionData(index: index).humanReadable)
+    }
+    
+    class func executeLastSolution() {
+        executeSolution(ProblemCollection.count - 1)
     }
     
     class func showLongestRunningSolutions() {

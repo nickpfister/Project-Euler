@@ -7,16 +7,14 @@
 
 import Foundation
 
-class NumberLetterCounts : ProblemProtocol {
-    var defaultInput: Int {
-        1000
-    }
+class NumberLetterCounts: Problem, InputReceiver {
+    var input = 1000
     
     var description: String {
         "If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?"
     }
     
-    enum NumberLetters : Int {
+    enum NumberLetters: Int {
         case one = 1
         case two
         case three
@@ -48,7 +46,8 @@ class NumberLetterCounts : ProblemProtocol {
         case thousand = 1000
     }
     
-    func solution(input number: Int) -> Int {
+    func solution() -> Int {
+        let number = input
         var count = 0
         for i in 1...number {
             count += numberToLetters(number: i).count
@@ -68,7 +67,7 @@ class NumberLetterCounts : ProblemProtocol {
         case 100...999:
             let remainder = number % 100
             let hundreds = number / 100
-            let ending = remainder > 0 ? "and" + numberToLetters(number: remainder) : ""
+            let ending = remainder > 0 ? "and" + numberToLetters(number: remainder): ""
             return "\(NumberLetters(rawValue: hundreds)!)" + "\(NumberLetters(rawValue: 100)!)" + ending
         case 1000:
             return "\(NumberLetters(rawValue: 1)!)" + "\(NumberLetters(rawValue: 1000)!)"

@@ -7,16 +7,15 @@
 
 import Foundation
 
-class LargestProductInSeries : ProblemProtocol {
-    var defaultInput: Int {
-        13
-    }
+class LargestProductInSeries: Problem, InputReceiver {
+    var input = 13
     
     var description: String {
         "Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?"
     }
     
-    func solution(input length: Int) -> Int {
+    func solution() -> Int {
+        let length = input
         let series = """
         73167176531330624919225119674426574742355349194934
         96983520312774506326239578318016984801869478851843

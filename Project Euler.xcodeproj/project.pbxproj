@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1EB08525C77FA500958312 /* InputReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1EB08425C77FA500958312 /* InputReceiver.swift */; };
 		BE55FA5A25C2929500B3C86B /* Problem0016.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE55FA5925C2929500B3C86B /* Problem0016.swift */; };
 		BE5CADE825BBB15E000BD935 /* ProblemSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CADE725BBB15E000BD935 /* ProblemSolver.swift */; };
 		BE5CADEB25BBB713000BD935 /* ExecutionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CADEA25BBB713000BD935 /* ExecutionData.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE1EB08425C77FA500958312 /* InputReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputReceiver.swift; sourceTree = "<group>"; };
 		BE55FA5925C2929500B3C86B /* Problem0016.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem0016.swift; sourceTree = "<group>"; };
 		BE5CADE725BBB15E000BD935 /* ProblemSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolver.swift; sourceTree = "<group>"; };
 		BE5CADEA25BBB713000BD935 /* ExecutionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionData.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				BE76C97B25AEBF130069EE43 /* ProblemCollection.swift */,
 				BE5CADE725BBB15E000BD935 /* ProblemSolver.swift */,
 				BE5CADEE25BBBAB8000BD935 /* Problem.swift */,
+				BE1EB08425C77FA500958312 /* InputReceiver.swift */,
 				BE5CADEA25BBB713000BD935 /* ExecutionData.swift */,
 				BE5CADF325BBC60C000BD935 /* CommonMath.swift */,
 				BE76C96F25AEBDBF0069EE43 /* Problems */,
@@ -212,6 +215,7 @@
 				BECE548725B156E60046B4B6 /* Problem0008.swift in Sources */,
 				BEA0033D25C4F92300C56C0A /* Problem0017.swift in Sources */,
 				BE5CADEB25BBB713000BD935 /* ExecutionData.swift in Sources */,
+				BE1EB08525C77FA500958312 /* InputReceiver.swift in Sources */,
 				BE76C97825AEBE020069EE43 /* Problem0002.swift in Sources */,
 				BECE548A25B171020046B4B6 /* Problem0009.swift in Sources */,
 				BE76C97625AEBE020069EE43 /* Problem0003.swift in Sources */,

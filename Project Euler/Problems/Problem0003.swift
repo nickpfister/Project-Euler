@@ -7,16 +7,15 @@
 
 import Foundation
 
-class LargestPrimeFactor : ProblemProtocol {
-    var defaultInput: Int {
-        600_851_475_143
-    }
+class LargestPrimeFactor: Problem, InputReceiver {
+    var input = 600_851_475_143
     
     var description: String {
         "What is the largest prime factor of the number 600851475143 ?"
     }
     
-    func solution(input number: Int) -> Int {
+    func solution() -> Int {
+        let number = input
         if (isPrime(number)) {
             return number
         }

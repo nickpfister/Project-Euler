@@ -7,10 +7,8 @@
 
 import Foundation
 
-class LatticePaths : ProblemProtocol {
-    var defaultInput: Int {
-        20
-    }
+class LatticePaths: Problem, InputReceiver {
+    var input = 20
     
     var description: String {
         "How many lattice paths are there through a 20×20 grid?"
@@ -19,7 +17,7 @@ class LatticePaths : ProblemProtocol {
     // Store the path counts for each node in this. Instead of counting them for every iteration, we can refer to this
     var nodePathCountLookup = [Int:Int]()
     
-    func solution(input: Int) -> Int {
+    func solution() -> Int {
         nodePathCountLookup = [Int:Int]()
         let graph = generateGraph(size: input)
         return getPathCount(graph: graph, start: 0)

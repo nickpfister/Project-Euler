@@ -7,16 +7,15 @@
 
 import Foundation
 
-class SummationOfPrimes : ProblemProtocol {
-    var defaultInput: Int {
-        2_000_000
-    }
+class SummationOfPrimes: Problem, InputReceiver {
+    var input = 2_000_000
     
     var description: String {
         "Find the sum of all the primes below two million."
     }
     
-    func solution(input max: Int) -> Int {
+    func solution() -> Int {
+        let max = input
         let largestNumberToSave = sqrtToInt(max)
         var primes = [2, 3]
         var sum = 5
