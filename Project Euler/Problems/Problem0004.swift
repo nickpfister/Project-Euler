@@ -16,8 +16,8 @@ class LargestPalindromeProduct: Problem, InputReceiver {
     
     func solution() -> Int {
         let digits = input
-        let max = Int(pow(10, Double(digits))) - 3
-        let min = Int(pow(10, Double(digits - 1)))
+        let max = 10 ^ digits - 3
+        let min = 10 ^ (digits - 1)
         for i in (min...max).reversed() {
             let palindrome = Int(String(i) + String(i).reversed())!
             for i in (min...max).reversed() {

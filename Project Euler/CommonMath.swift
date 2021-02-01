@@ -118,3 +118,19 @@ func collatzLength(_ number: Int) -> Int {
     }
     return length
 }
+
+extension Int {
+    static func ^ (left: Int, right: Int) -> Int {
+        return Int(pow(Double(left), Double(right)))
+    }
+}
+
+extension Double {
+    static func ^ (left: Double, right: Double) -> Double {
+        return pow(left, right)
+    }
+    
+    static func ^ (left: Double, right: Int) -> Double {
+        return pow(left, Double(right))
+    }
+}

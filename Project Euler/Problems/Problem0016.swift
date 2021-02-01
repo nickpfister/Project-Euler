@@ -16,7 +16,7 @@ class PowerDigitSum: Problem, InputReceiver {
     
     func solution() -> Int {
         let exponent = input
-        let number = pow(2.0, Double(exponent))
+        let number = 2.0 ^ exponent
         let stringNumber = String(format: "%.0f", number)
         var sum = 0
         for stringDigit in stringNumber {

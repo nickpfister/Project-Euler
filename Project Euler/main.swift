@@ -7,7 +7,7 @@
 
 import Foundation
 
-ProblemSolver.executeWithCustomInput(input: 20, problem: SmallestMultiple())
+ProblemSolver.showLongestRunningSolutions()
 
 /*
  Commonly used math that could be extracted:

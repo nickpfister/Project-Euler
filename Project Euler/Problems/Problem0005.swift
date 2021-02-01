@@ -35,7 +35,7 @@ class SmallestMultiple: Problem, InputReceiver {
         
         var product = 1
         for (number, count) in factors {
-            product *= Int(pow(Double(number), Double(count)))
+            product *= number ^ count
         }
         return product
     }
